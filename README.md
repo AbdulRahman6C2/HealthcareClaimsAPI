@@ -20,6 +20,20 @@ A reviewer can then resolve any claim as `Approved` or `Denied` via a dedicated 
 - **Swagger / OpenAPI** for interactive API documentation
 - Deployed on live SQL Server + IIS hosting via FTP
 
+## Project structure
+
+\```
+HealthcareClaimsApi/
+├── Controllers/     API endpoints (Patients, Appointments, Claims) — MVC-style [ApiController]s
+├── Models/           EF Core entities: Patient, Appointment, Claim (with the audit-threshold rule)
+├── Dtos/              Request DTOs — keep the API input clean, separate from the database entities
+├── Data/               AppDbContext — EF Core setup and entity relationship configuration
+├── Migrations/     EF Core-generated database schema history
+├── Properties/       launchSettings.json — local run configuration
+├── Program.cs        App startup: DI, EF Core registration, Swagger, routing
+└── appsettings.json  Configuration (connection string — not committed; see .gitignore)
+\```
+
 ## Architecture
 
 ```
