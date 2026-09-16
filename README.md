@@ -22,7 +22,7 @@ A reviewer can then resolve any claim as `Approved` or `Denied` via a dedicated 
 
 ## Project structure
 
-\```
+```
 HealthcareClaimsApi/
 ├── Controllers/     API endpoints (Patients, Appointments, Claims) — MVC-style [ApiController]s
 ├── Models/           EF Core entities: Patient, Appointment, Claim (with the audit-threshold rule)
@@ -32,7 +32,7 @@ HealthcareClaimsApi/
 ├── Properties/       launchSettings.json — local run configuration
 ├── Program.cs        App startup: DI, EF Core registration, Swagger, routing
 └── appsettings.json  Configuration (connection string — not committed; see .gitignore)
-\```
+```
 
 ## Architecture
 
